@@ -3,7 +3,7 @@ name: jamstack-website
 access: default
 vars:
   apiSourceCode: api
-  domain: serverlessgo.resume.net.cn
+  domain: {{domain|官方提供一级域名，二级域名用户自己定义，最终生成：<你输入的域名>.resume.net.cn}}.resume.net.cn
   releaseCode: website # 最终构建的代码包
 services:
   # api:
