@@ -1,0 +1,9 @@
+Type: Application
+Name: docsite-basic
+Version: 版本，例如0.0.1
+Category: 全栈应用
+HomePage: 'https://docsite.js.org/'
+Tags:
+  - Web框架
+  - docsite
+Description: 基于docsite的基础模板，帮助用户快速构建企业级技术站点，适合开源项目展示，技术类文章展示
