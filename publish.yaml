@@ -1,6 +1,6 @@
 Type: Application
 Name: docsite-basic
-Version: 0.0.5
+Version: 0.0.6
 Category: 全栈应用
 HomePage: 'https://docsite.js.org/'
 Tags:
@@ -8,3 +8,4 @@ Tags:
   - docsite
   - jamstack
 Description: 基于docsite的基础模板，帮助用户快速构建企业级技术站点，适合开源项目展示，技术类文章展示
+

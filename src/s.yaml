@@ -6,20 +6,42 @@ vars:
   domain: {{domain|官方提供一级域名，二级域名用户自己定义，最终生成：<你输入的域名>.resume.net.cn}}.resume.net.cn
   releaseCode: website # 最终构建的代码包
 services:
-  # api:
-  #   component: devsapp/jamstack-api
+  # api:  # api 服务部分
+  #   component: devsapp/fc 
   #   actions:
   #     pre-deploy:
-  #       - run: npm install
+  #       - run: npm i
   #         path: ./functions
   #   props:
   #     region: cn-hangzhou
-  #     app:
-  #       name: devs-http-demo #选填 默认 devs-http-demo
-  #     sourceCode: functions
-  #     route:
-  #       - /
-  jamstack-website:
+  #     service:
+  #       name: api-service
+  #       description: your site dynamic api
+  #       internetAccess: true
+  #     function:
+  #       name: http
+  #       description: node run time
+  #       runtime: nodejs12
+  #       codeUri: ./functions
+  #       handler: index.handler
+  #       memorySize: 128
+  #       timeout: 10
+  #     triggers:
+  #       - name: httpTrigger
+  #         type: http
+  #         config:
+  #           authType: anonymous
+  #           methods:
+  #             - GET
+  #             - POST
+  #             - PUT
+  #             - DELETE
+  #     customDomains:
+  #       - domainName: auto
+  #         protocol: HTTP
+  #         routeConfigs:
+  #           - path: /*
+  www: # 静态站点部分
     component: jamstack
     props:
       domain: ${vars.domain}
